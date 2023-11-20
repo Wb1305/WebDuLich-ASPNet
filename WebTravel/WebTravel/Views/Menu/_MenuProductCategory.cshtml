@@ -1,0 +1,54 @@
+﻿@model IEnumerable<WebTravel.Models.EF.ProductCategory>
+
+@if (Model != null && Model.Any())
+{   
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="product_slider_container">
+                    <div class="owl-carousel owl-theme product_slider">
+
+                        @foreach (var item in Model)
+                        {
+                            <div class="col-md-auto">
+                                <div class="banner_item align-items-center" style="background-image: url(@item.Icon)">
+                                    <div class="banner_category">
+                                        <a href="@item.Alias">@item.Title</a>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+
+                    </div>
+
+                    <!-- Slider Navigation -->
+
+                    <div class="product_slider_nav_left product_slider_nav d-flex align-items-center justify-content-center flex-column">
+                        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                    </div>
+                    <div class="product_slider_nav_right product_slider_nav d-flex align-items-center justify-content-center flex-column">
+                        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+}
+
+@*<div class="banner">
+    <div class="container">
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <div class="col-md-4">
+                    <div class="banner_item align-items-center" style="background-image: url(@item.Icon)">
+                        <div class="banner_category">
+                            <a href="@item.Alias">@item.Title</a>
+                        </div>
+                    </div>
+                </div>
+            }
+
+        </div>
+    </div>
+</div>*@

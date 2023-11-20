@@ -1,0 +1,20 @@
+﻿@model IEnumerable<WebTravel.Models.EF.Category>
+
+@if (Model != null && Model.Any())
+{
+    <ul class="main_nav_list">
+        @foreach (var item in Model)
+        {
+            if (item.Alias.Equals("trang-chu"))
+            {
+                item.Alias = "";
+            }
+            if (!string.IsNullOrEmpty(item.Link))
+            {
+                item.Alias = item.Link;
+            }
+            <li class="menu_item"><a href="/@item.Alias">@item.Title</a></li>
+
+        }
+    </ul>
+}
