@@ -120,15 +120,19 @@ namespace WebTravel.Areas.Admin.Controllers
                         db.ProductImages.Remove(img);
                         db.SaveChanges();
                     }
+                    db.Products.Remove(item);
+                    db.SaveChanges();
+                    return Json(new { success = true });
                 }
                 else
-                
-                db.Products.Remove(item);
-                db.SaveChanges();
-                return Json(new { success = true });
+                {
+                    db.Products.Remove(item);
+                    db.SaveChanges();
+                    return Json(new { success = true });
+                }
             }
-
             return Json(new { success = false });
+
         }
 
         [HttpPost]

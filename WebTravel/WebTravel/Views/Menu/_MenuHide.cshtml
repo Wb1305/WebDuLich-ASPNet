@@ -1,8 +1,21 @@
 ﻿@model IEnumerable<WebTravel.Models.EF.Category>
 
+@*<ul class="menu_top_nav">
+    <li class="menu_item has-children">
+        <a href="#">
+            My Account
+            <i class="fa fa-angle-down"></i>
+        </a>
+        <ul class="menu_selection">
+            <li><a href="#"><i class="fa fa-sign-in" aria-hidden="true"></i>Sign In</a></li>
+            <li><a href="#"><i class="fa fa-user-plus" aria-hidden="true"></i>Register</a></li>
+        </ul>
+    </li>
+</ul>*@
+
 @if (Model != null && Model.Any())
 {
-    <ul class="main_nav_list">
+    <ul class="menu_top_nav">
         @foreach (var item in Model)
         {
             if (item.Alias.Equals("trang-chu"))

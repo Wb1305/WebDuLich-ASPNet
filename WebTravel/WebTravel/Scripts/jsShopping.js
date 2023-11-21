@@ -31,7 +31,7 @@
     });
     $('body').on('click', '.btnDeleteAll', function (e) {
         e.preventDefault();
-        var conf = confirm('Bạn có chắc muốn xóa hết sản phẩm trong giỏ hàng?');
+        var conf = confirm('Bạn có chắc muốn xóa hết tour trong giỏ hàng?');
         //debugger;
         if (conf == true) {
             DeleteAll();
@@ -42,7 +42,7 @@
     $('body').on('click', '.btnDelete', function (e) {
         e.preventDefault();
         var id = $(this).data('id');
-        var conf = confirm('Bạn có chắc muốn xóa sản phẩm này khỏi giỏ hàng?');
+        var conf = confirm('Bạn có chắc muốn xóa tour này khỏi giỏ hàng?');
         if (conf == true) {
             $.ajax({
                 url: '/shoppingcart/Delete',

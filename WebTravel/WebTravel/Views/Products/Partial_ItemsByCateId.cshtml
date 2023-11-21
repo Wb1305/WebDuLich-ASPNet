@@ -10,7 +10,7 @@
         {
             strImge = img.Image;
         }
-        <div class="product-item @item.ProductCategory.Alias">
+        <div class="product-item @item.ProductCategory.Alias pr-2">
             <div class="product discount product_filter">
                 <div class="product_image">
                     <img src="@strImge" alt="@item.Title">
@@ -21,7 +21,7 @@
                     <div class="product_bubble product_bubble_right product_bubble_red d-flex flex-column align-items-center"><span>sale</span></div>
                 }
                 @* <div class="product_bubble product_bubble_right product_bubble_red d-flex flex-column align-items-center"><span>-$20</span></div>*@
-                <div class="product_info">
+                <div class="product_info ">
                     <h6 class="product_name"><a href="/chi-tiet/@item.Alias-p@(item.Id)">@item.Title</a></h6>
                     @if (item.PriceSale > 0)
                     {

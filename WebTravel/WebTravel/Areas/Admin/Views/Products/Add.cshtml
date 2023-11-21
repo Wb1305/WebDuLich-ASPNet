@@ -16,7 +16,7 @@
             <a href="/admin" class="nav-link">Trang chủ</a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
-            <a href="/admin/products" class="nav-link">Sản phẩm</a>
+            <a href="/admin/products" class="nav-link">tour</a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
             <a href="#" class="nav-link">Thêm mới</a>
@@ -30,7 +30,7 @@
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h1>Thêm mới Sản phẩm</h1>
+                <h1>Thêm mới tour</h1>
             </div>
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
@@ -48,7 +48,7 @@
     <!-- Default box -->
     <div class="card">
         <div class="card-header">
-            <h3 class="card-title">Thông tin thêm mới Sản phẩm</h3>
+            <h3 class="card-title">Thông tin thêm mới tour</h3>
         </div>
         <div class="card-body">
             <div class="row">
@@ -69,8 +69,8 @@
                             <div class="tab-content">
                                 <div class="active tab-pane" id="activity">
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">Tên sản phẩm</label>
-                                        @Html.TextBoxFor(x => x.Title, new { @class = "form-control", @placeholder = "Tên sản phẩm" })
+                                        <label for="exampleInputEmail1">Tên tour</label>
+                                        @Html.TextBoxFor(x => x.Title, new { @class = "form-control", @placeholder = "Tên tour" })
                                         @Html.ValidationMessageFor(x => x.Title, null, new { @class = "text-danger" })
                                     </div>
                                     <div class="form-group">
@@ -85,7 +85,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Danh mục</label>
-                                        @Html.DropDownListFor(x => x.ProductCategoryId, ViewBag.ProductCategory as SelectList, "-Chọn danh mục sản phẩm-", new { @class = "form-control", @placeholder = "Mã mã phẩm" })
+                                        @Html.DropDownListFor(x => x.ProductCategoryId, ViewBag.ProductCategory as SelectList, "-Chọn danh mục tour-", new { @class = "form-control", @placeholder = "Mã mã phẩm" })
                                         @Html.ValidationMessageFor(x => x.ProductCategoryId, null, new { @class = "text-danger" })
                                     </div>
                                     <div class="form-group">
@@ -94,7 +94,7 @@
                                         @Html.ValidationMessageFor(x => x.Description, null, new { @class = "text-danger" })
                                     </div>
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">Chi tiết sản phẩm</label>
+                                        <label for="exampleInputEmail1">Chi tiết tour</label>
                                         @Html.TextAreaFor(x => x.Detail, new { @class = "form-control", @id = "txtDetail" })
                                         @Html.ValidationMessageFor(x => x.Detail, null, new { @class = "text-danger" })
                                     </div>
@@ -122,14 +122,6 @@
                                                 @Html.ValidationMessageFor(x => x.PriceSale, null, new { @class = "text-danger" })
                                             </div>
                                         </div>
-                                        <div class="col-3">
-                                            <div class="form-group">
-                                                <label for="exampleInputEmail1">Giá nhập</label>
-                                                <input type="text" name="demoOriginalPrice" id="demoOriginalPrice" value="" class="form-control auto">
-                                                @Html.HiddenFor(x => x.OriginalPrice, new { @class = "form-control", @placeholder = "Giá nhập" })
-                                                @Html.ValidationMessageFor(x => x.OriginalPrice, null, new { @class = "text-danger" })
-                                            </div>
-                                        </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-3">
@@ -139,8 +131,6 @@
                                                     @Html.CheckBoxFor(x => x.IsActive, new { @class = "custom-control-input", @id = "customCheckbox2", @checked = "checked" })
                                                     <label for="customCheckbox2" class="custom-control-label">Hiển thị</label>
                                                 </div>
-
-
                                             </div>
                                         </div>
                                         <div class="col-3">
@@ -174,6 +164,7 @@
                                     <div class="row">
                                         <div class="col-md-12 text-right">
                                             <input type="button" class="btn btn-primary" id="iTaiAnh" onclick="BrowseServer();" value="Tải ảnh" />
+                                          
                                         </div>
                                         <div class="col-md-12">
                                             <table class="table table-hover" id="tbAnhSanPham">
@@ -225,7 +216,8 @@
                             <!-- /.tab-content -->
                         </div><!-- /.card-body -->
                         <div class="form-group">
-                           <button type="submit" class="btn btn-success">Thêm mới</button>
+                            <a href="/admin/products" class="btn btn-danger">Quay lại</a>
+                            <button type="submit" class="btn btn-success">Thêm mới</button>
                         </div>
                     </div> <!-- /.card -->
                     }

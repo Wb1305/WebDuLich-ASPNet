@@ -30,6 +30,9 @@ namespace WebTravel.Models.EF
         public string ProductCode { get; set; }
         public string Description { get; set; }
 
+        //public DateTime DayGo { get; set; }
+        //public DateTime DayBack { get; set; }
+
         [AllowHtml]
         public string Detail { get; set; }
 

@@ -1,6 +1,6 @@
 ﻿@model WebTravel.Models.EF.Product
 @{
-    ViewBag.Title = "Cập nhật sản phẩm";
+    ViewBag.Title = "Cập nhật tour";
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
 
@@ -16,7 +16,7 @@
             <a href="/admin" class="nav-link">Trang chủ</a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
-            <a href="/admin/products" class="nav-link">Sản phẩm</a>
+            <a href="/admin/products" class="nav-link">tour</a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
             <a href="#" class="nav-link">Cập nhật</a>
@@ -30,11 +30,11 @@
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h1>Cập nhật Sản phẩm</h1>
+                <h1>Cập nhật tour</h1>
             </div>
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
-                    <li class="breadcrumb-item"><a href="#">Sản phẩm</a></li>
+                    <li class="breadcrumb-item"><a href="#">tour</a></li>
                     <li class="breadcrumb-item active">Cập nhật</li>
                 </ol>
             </div>
@@ -48,7 +48,7 @@
     <!-- Default box -->
     <div class="card">
         <div class="card-header">
-            <h3 class="card-title">Thông tin Sản phẩm</h3>
+            <h3 class="card-title">Thông tin tour</h3>
         </div>
         <div class="card-body">
             <div class="row">
@@ -63,7 +63,7 @@
                             <div class="card-header p-2">
                                 <ul class="nav nav-pills">
                                     <li class="nav-item"><a class="nav-link active" href="#activity" data-toggle="tab">Thông tin chung</a></li>
-                                    @*<li class="nav-item"><a class="nav-link" href="#timeline" data-toggle="tab">Hình ảnh</a></li>*@
+                                    <li class="nav-item"><a class="nav-link" href="#timeline" data-toggle="tab">Hình ảnh</a></li>
                                     <li class="nav-item"><a class="nav-link" href="#settings" data-toggle="tab">SEO</a></li>
                                 </ul>
                             </div><!-- /.card-header -->
@@ -71,8 +71,8 @@
                                 <div class="tab-content">
                                     <div class="active tab-pane" id="activity">
                                         <div class="form-group">
-                                            <label for="exampleInputEmail1">Tên sản phẩm</label>
-                                            @Html.TextBoxFor(x => x.Title, new { @class = "form-control", @placeholder = "Tên sản phẩm" })
+                                            <label for="exampleInputEmail1">Tên tour</label>
+                                            @Html.TextBoxFor(x => x.Title, new { @class = "form-control", @placeholder = "Tên tour" })
                                             @Html.ValidationMessageFor(x => x.Title, null, new { @class = "text-danger" })
                                         </div>
                                         <div class="form-group">
@@ -80,6 +80,7 @@
                                             @Html.TextBoxFor(x => x.Alias, new { @class = "form-control", @placeholder = "Alias" })
                                             @Html.ValidationMessageFor(x => x.Alias, null, new { @class = "text-danger" })
                                         </div>
+
                                         <div class="form-group">
                                             <label for="exampleInputEmail1">SKU</label>
                                             @Html.TextBoxFor(x => x.ProductCode, new { @class = "form-control", @placeholder = "Mã mã phẩm" })
@@ -87,7 +88,7 @@
                                         </div>
                                         <div class="form-group">
                                             <label for="exampleInputEmail1">Danh mục</label>
-                                            @Html.DropDownListFor(x => x.ProductCategoryId, ViewBag.ProductCategory as SelectList, "-Chọn danh mục sản phẩm-", new { @class = "form-control", @placeholder = "Mã mã phẩm" })
+                                            @Html.DropDownListFor(x => x.ProductCategoryId, ViewBag.ProductCategory as SelectList, "-Chọn danh mục tour-", new { @class = "form-control", @placeholder = "Mã mã phẩm" })
                                             @Html.ValidationMessageFor(x => x.ProductCategoryId, null, new { @class = "text-danger" })
                                         </div>
                                         <div class="form-group">
@@ -96,7 +97,7 @@
                                             @Html.ValidationMessageFor(x => x.Description, null, new { @class = "text-danger" })
                                         </div>
                                         <div class="form-group">
-                                            <label for="exampleInputEmail1">Chi tiết sản phẩm</label>
+                                            <label for="exampleInputEmail1">Chi tiết tour</label>
                                             @Html.TextAreaFor(x => x.Detail, new { @class = "form-control", @id = "txtDetail" })
                                             @Html.ValidationMessageFor(x => x.Detail, null, new { @class = "text-danger" })
                                         </div>
@@ -124,14 +125,7 @@
                                                     @Html.ValidationMessageFor(x => x.PriceSale, null, new { @class = "text-danger" })
                                                 </div>
                                             </div>
-                                            <div class="col-3">
-                                                <div class="form-group">
-                                                    <label for="exampleInputEmail1">Giá nhập</label>
-                                                    <input type="text" name="demoOriginalPrice" id="demoOriginalPrice" value="@Model.OriginalPrice" class="form-control auto">
-                                                    @Html.HiddenFor(x => x.OriginalPrice, new { @class = "form-control", @placeholder = "Giá nhập" })
-                                                    @Html.ValidationMessageFor(x => x.OriginalPrice, null, new { @class = "text-danger" })
-                                                </div>
-                                            </div>
+
                                         </div>
                                         <div class="row">
                                             <div class="col-3">
@@ -175,6 +169,7 @@
                                     <div class="tab-pane" id="timeline">
                                         <div class="row">
                                             <div class="col-md-12 text-right">
+                                                @Html.TextBoxFor(x => x.Image, new { @id = "txtImage", @class = "form-control" })
                                                 <input type="button" class="btn btn-primary" id="iTaiAnh" onclick="BrowseServer();" value="Tải ảnh" />
                                             </div>
                                             <div class="col-md-12">
@@ -194,9 +189,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- /.tab-pane -->
-
-
+                                    <!-- /.tab-pane  SEO-->
                                     <div class="tab-pane" id="settings">
                                         <form class="form-horizontal">
                                             <div class="form-group row">
@@ -223,13 +216,13 @@
 
                                         </form>
                                     </div>
-                                    <!-- /.tab-pane -->
                                 </div>
                                 <!-- /.tab-content -->
                             </div><!-- /.card-body -->
                             <div class="form-group">
-                                <button type="submit" class="btn btn-success">Lưu Lại</button>
                                 <a href="/admin/products" class="btn btn-danger">Quay lại</a>
+                                <button type="submit" class="btn btn-success">Lưu Lại</button>
+
                             </div>
                         </div> <!-- /.card -->
                     }
@@ -248,6 +241,33 @@
 <!-- /.content -->
 
 @section  scripts{
+    @*<script>
+            //$(document).ready(function () {
+            //    $('.auto').autoNumeric('init');
+            //    $('#demoPrice').bind('blur focusout keypress keyup', function () {
+            //        var demoGet = $('#demoPrice').autoNumeric('get');
+            //        $('#Price').val(demoGet);
+            //        $('#Price').autoNumeric('set', demoGet);
+            //    });
+            //    $('#demoPriceSale').bind('blur focusout keypress keyup', function () {
+            //        var demoGet = $('#demoPriceSale').autoNumeric('get');
+            //        $('#PriceSale').val(demoGet);
+            //        $('#PriceSale').autoNumeric('set', demoGet);
+            //    });
+            //    $('#demoOriginalPrice').bind('blur focusout keypress keyup', function () {
+            //        var demoGet = $('#demoOriginalPrice').autoNumeric('get');
+            //        $('#OriginalPrice').val(demoGet);
+            //        $('#OriginalPrice').autoNumeric('set', demoGet);
+            //    });
+            //    CKEDITOR.replace('txtDetail', {
+            //        customConfig: '/content/ckeditor/config.js',
+            //        extraAllowedContent: 'span',
+            //    });
+
+
+            //});
+        </script>*@
+
     <script>
         $(document).ready(function () {
             $('.auto').autoNumeric('init');
@@ -271,7 +291,63 @@
                 extraAllowedContent: 'span',
             });
 
-
+            $('body').on('click', '.btnXoaAnh', function () {
+                var conf = confirm('Bạn có muốn xóa ảnh này không?');
+                if (conf === true) {
+                    var _id = $(this).data('id');
+                    $('#trow_' + _id).fadeTo('fast', 0.5, function () {
+                        $(this).slideUp('fast', function () { $(this).remove(); });
+                    });
+                    var temp = $('#tCurrentId').val();
+                    var currentId = parseInt(temp) - 1;
+                    $('#tCurrentId').val(currentId);
+                }
+            });
         });
+        function BrowseServer(field) {
+            var finder = new CKFinder();
+            finder.selectActionFunction = function (fileUrl) {
+                addImageProduct(fileUrl);
+            };
+            finder.popup();
+        }
+        function addImageProduct(url) {
+            var temp = $('#tCurrentId').val();
+            var currentId = parseInt(temp) + 1;
+            var str = "";
+            if (currentId == 1) {
+                str += `<tr id="trow_${currentId}">
+                                <td class="text-center">${currentId}</td>
+                                <td class="text-center"><img width="80" src="${url}" /> <input type='hidden' value="${url}" name="Images"/></td>
+                                <td class="text-center"><input type="radio" name="rDefault" value="${currentId}" checked="checked"/></td>
+                                <td class="text-center"><a href="#" data-id="${currentId}" class="btn btn-sm btn-danger btnXoaAnh">Xóa</a></td>
+                                </tr>`;
+            }
+            else {
+                str += `<tr id="trow_${currentId}">
+                                <td class="text-center">${currentId}</td>
+                                <td class="text-center"><img width="80" src="${url}" /> <input type='hidden' value="${url}" name="Images"/></td>
+                                <td class="text-center"><input type="radio" name="rDefault" value="${currentId}"/></td>
+                                <td class="text-center"><a href="#" data-id="${currentId}" class="btn btn-sm btn-danger btnXoaAnh">Xóa</a></td>
+                                </tr>`;
+            }
+            $('#tbHtml').append(str);
+            $('#tCurrentId').val(currentId);
+            //$('#tbHtml tr td a').each(function () {
+            //    $(this).click(function () {
+            //        var conf = confirm('Bạn có muốn xóa ảnh này không?');
+            //        if (conf === true) {
+            //            var _id = $(this).data('id');
+            //            $('#trow_' + _id).fadeTo('fast',1, function () {
+            //                $(this).slideUp('fast', function () { $(this).remove(); });
+            //            });
+            //            var temp = $('#tCurrentId').val();
+            //            var currentId = parseInt(temp) - 1;
+            //            $('#tCurrentId').val(currentId);
+            //            }
+            //        });
+            //    });
+        }
+
     </script>
 }

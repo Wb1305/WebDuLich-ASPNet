@@ -1,7 +1,7 @@
 ﻿@model PagedList.PagedList<WebTravel.Models.EF.Product>
 @using PagedList.Mvc
 @{
-    ViewBag.Title = "Danh sách sản phẩm";
+    ViewBag.Title = "Danh sách Tour";
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
 
@@ -27,7 +27,7 @@
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h1>Quản lý sản phẩm</h1>
+                <h1>Quản lý tour</h1>
             </div>
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
@@ -72,7 +72,7 @@
                         <th><input type="checkbox" id="SelectAll" /></th>
                         <th>STT</th>
                         <th>Hình ảnh</th>
-                        <th>Tên sản phẩm</th>
+                        <th>Tên Tour</th>
                         <th>Danh mục</th>
                         <th>Số lượng</th>
                         <th>Giá</th>
@@ -168,7 +168,7 @@
                 height: '600',
                 width: '700',
                 resizable: true,
-                title: 'Quản lý ảnh sản phẩm',
+                title: 'Quản lý ảnh tour',
                 close: function () {
                     window.location.reload();
                 }
@@ -201,7 +201,7 @@
                     var conf = confirm('Bạn có muốn xóa các bản ghi này hay không?');
                     if (conf === true) {
                         $.ajax({
-                            url: '/admin/news/deleteAll',
+                            url: '/admin/Products/deleteAll',
                             type: 'POST',
                             data: { ids: str },
                             success: function (rs) {
