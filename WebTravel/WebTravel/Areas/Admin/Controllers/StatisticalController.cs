@@ -31,7 +31,8 @@ namespace WebTravel.Areas.Admin.Controllers
                             CreatedDate = o.CreatedDate,
                             Quantity = od.Quantity,
                             Price = od.Price,
-                            OriginalPrice = p.OriginalPrice
+                            //OriginalPrice = p.OriginalPrice
+                            PriceSale = p.PriceSale
                         };
             if (!string.IsNullOrEmpty(fromDate))
             {
@@ -47,13 +48,14 @@ namespace WebTravel.Areas.Admin.Controllers
             var result = query.GroupBy(x => DbFunctions.TruncateTime(x.CreatedDate)).Select(x => new
             {
                 Date = x.Key.Value,
-                TotalBuy = x.Sum(y => y.Quantity * y.OriginalPrice),
-                TotalSell = x.Sum(y => y.Quantity * y.Price),
+                //TotalSale = (x. != null) ? x.Sum(y => y.Quantity * y.PriceSale) :  x.Sum(y => y.Quantity * y.Price),
+                TotalSale = x.Sum(y => y.Quantity * y.PriceSale),
+                TotalBuy = x.Sum(y => y.Quantity * y.Price),
             }).Select(x => new
             {
                 Date = x.Date,
-                DoanhThu = x.TotalSell,
-                LoiNhuan = x.TotalSell - x.TotalBuy
+                DoanhThu = x.TotalBuy,
+                //LoiNhuan = x.TotalSell - x.TotalSale
             });
             return Json(new { Data = result }, JsonRequestBehavior.AllowGet);
         }

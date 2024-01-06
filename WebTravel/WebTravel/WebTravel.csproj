@@ -210,81 +210,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202205220743208_CreatedDataabase.cs" />
-    <Compile Include="Migrations\202205220743208_CreatedDataabase.Designer.cs">
-      <DependentUpon>202205220743208_CreatedDataabase.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202205220825500_UpdateCategory.cs" />
-    <Compile Include="Migrations\202205220825500_UpdateCategory.Designer.cs">
-      <DependentUpon>202205220825500_UpdateCategory.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202205220838213_UpdateData.cs" />
-    <Compile Include="Migrations\202205220838213_UpdateData.Designer.cs">
-      <DependentUpon>202205220838213_UpdateData.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202205300014505_UpdateActive.cs" />
-    <Compile Include="Migrations\202205300014505_UpdateActive.Designer.cs">
-      <DependentUpon>202205300014505_UpdateActive.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202206042359553_ChangeModels.cs" />
-    <Compile Include="Migrations\202206042359553_ChangeModels.Designer.cs">
-      <DependentUpon>202206042359553_ChangeModels.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202206080021056_UpdateProductCategory.cs" />
-    <Compile Include="Migrations\202206080021056_UpdateProductCategory.Designer.cs">
-      <DependentUpon>202206080021056_UpdateProductCategory.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202206120012056_Update1206.cs" />
-    <Compile Include="Migrations\202206120012056_Update1206.Designer.cs">
-      <DependentUpon>202206120012056_Update1206.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202206120018168_Update12061.cs" />
-    <Compile Include="Migrations\202206120018168_Update12061.Designer.cs">
-      <DependentUpon>202206120018168_Update12061.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202206260100121_UpdatePayment.cs" />
-    <Compile Include="Migrations\202206260100121_UpdatePayment.Designer.cs">
-      <DependentUpon>202206260100121_UpdatePayment.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202206290056018_CreateTBThongKe.cs" />
-    <Compile Include="Migrations\202206290056018_CreateTBThongKe.Designer.cs">
-      <DependentUpon>202206290056018_CreateTBThongKe.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202207010222232_UpdteEmail.cs" />
-    <Compile Include="Migrations\202207010222232_UpdteEmail.Designer.cs">
-      <DependentUpon>202207010222232_UpdteEmail.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202207050227486_Updatekey.cs" />
-    <Compile Include="Migrations\202207050227486_Updatekey.Designer.cs">
-      <DependentUpon>202207050227486_Updatekey.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202207130019236_CreateTableEmailAndSetting.cs" />
-    <Compile Include="Migrations\202207130019236_CreateTableEmailAndSetting.Designer.cs">
-      <DependentUpon>202207130019236_CreateTableEmailAndSetting.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202207130044100_DeleteTable.cs" />
-    <Compile Include="Migrations\202207130044100_DeleteTable.Designer.cs">
-      <DependentUpon>202207130044100_DeleteTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202207130047209_DeleteTable2.cs" />
-    <Compile Include="Migrations\202207130047209_DeleteTable2.Designer.cs">
-      <DependentUpon>202207130047209_DeleteTable2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202207172353142_UpdateSubcrie.cs" />
-    <Compile Include="Migrations\202207172353142_UpdateSubcrie.Designer.cs">
-      <DependentUpon>202207172353142_UpdateSubcrie.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202302151044116_UpdateOriginalPrice.cs" />
-    <Compile Include="Migrations\202302151044116_UpdateOriginalPrice.Designer.cs">
-      <DependentUpon>202302151044116_UpdateOriginalPrice.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202303210509163_EditCategory.cs" />
-    <Compile Include="Migrations\202303210509163_EditCategory.Designer.cs">
-      <DependentUpon>202303210509163_EditCategory.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202303210511295_EditCategory2.cs" />
-    <Compile Include="Migrations\202303210511295_EditCategory2.Designer.cs">
-      <DependentUpon>202303210511295_EditCategory2.cs</DependentUpon>
+    <Compile Include="Migrations\202311210741210_DatabaseNew.cs" />
+    <Compile Include="Migrations\202311210741210_DatabaseNew.designer.cs">
+      <DependentUpon>202311210741210_DatabaseNew.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -3771,7 +3699,6 @@
     <Content Include="Scripts\jsShopping.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Uploads\images\244994762_2380031152133544_4984166604951804110_n.jpg" />
-    <Content Include="Uploads\_thumbs\Images\244994762_2380031152133544_4984166604951804110_n.jpg" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -3838,6 +3765,7 @@
     <Folder Include="Content\ckfinder\userfiles\" />
     <Folder Include="Uploads\files\" />
     <Folder Include="Uploads\flash\" />
+    <Folder Include="Uploads\_thumbs\Images\" />
     <Folder Include="Views\Role\" />
     <Folder Include="Views\Search\" />
   </ItemGroup>
@@ -3855,62 +3783,8 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202205220743208_CreatedDataabase.resx">
-      <DependentUpon>202205220743208_CreatedDataabase.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202205220825500_UpdateCategory.resx">
-      <DependentUpon>202205220825500_UpdateCategory.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202205220838213_UpdateData.resx">
-      <DependentUpon>202205220838213_UpdateData.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202205300014505_UpdateActive.resx">
-      <DependentUpon>202205300014505_UpdateActive.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202206042359553_ChangeModels.resx">
-      <DependentUpon>202206042359553_ChangeModels.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202206080021056_UpdateProductCategory.resx">
-      <DependentUpon>202206080021056_UpdateProductCategory.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202206120012056_Update1206.resx">
-      <DependentUpon>202206120012056_Update1206.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202206120018168_Update12061.resx">
-      <DependentUpon>202206120018168_Update12061.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202206260100121_UpdatePayment.resx">
-      <DependentUpon>202206260100121_UpdatePayment.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202206290056018_CreateTBThongKe.resx">
-      <DependentUpon>202206290056018_CreateTBThongKe.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202207010222232_UpdteEmail.resx">
-      <DependentUpon>202207010222232_UpdteEmail.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202207050227486_Updatekey.resx">
-      <DependentUpon>202207050227486_Updatekey.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202207130019236_CreateTableEmailAndSetting.resx">
-      <DependentUpon>202207130019236_CreateTableEmailAndSetting.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202207130044100_DeleteTable.resx">
-      <DependentUpon>202207130044100_DeleteTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202207130047209_DeleteTable2.resx">
-      <DependentUpon>202207130047209_DeleteTable2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202207172353142_UpdateSubcrie.resx">
-      <DependentUpon>202207172353142_UpdateSubcrie.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202302151044116_UpdateOriginalPrice.resx">
-      <DependentUpon>202302151044116_UpdateOriginalPrice.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202303210509163_EditCategory.resx">
-      <DependentUpon>202303210509163_EditCategory.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202303210511295_EditCategory2.resx">
-      <DependentUpon>202303210511295_EditCategory2.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202311210741210_DatabaseNew.resx">
+      <DependentUpon>202311210741210_DatabaseNew.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

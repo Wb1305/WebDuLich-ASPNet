@@ -27,7 +27,7 @@ namespace WebTravel.Areas.Admin.Controllers
                 items= items.Where(x=>x.Alias.Contains(Searchtext) || x.Title.Contains(Searchtext));
             }
             var pageIndex = page.HasValue ? Convert.ToInt32(page) : 1;
-             items = items.ToPagedList(pageIndex, pageSize);
+            items = items.ToPagedList(pageIndex, pageSize);
             ViewBag.PageSize = pageSize;
             ViewBag.Page = page;
             return View(items);

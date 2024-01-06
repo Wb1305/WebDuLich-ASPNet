@@ -33,10 +33,11 @@
             <table class="table table-bordered">
                 <thead>
                     <tr>
-                        <th>#</th>
+                        <th>STT</th>
                         <th>UserName</th>
                         <th>Họ tên</th>
                         <th>Email</th>
+                        <th>SĐT</th>
                         <th></th>
                     </tr>
                 </thead>
@@ -51,6 +52,7 @@
                                 <td>@item.UserName</td>
                                 <td>@item.FullName</td>
                                 <td>@item.Email</td>
+                                <td>@item.Phone</td>
                                 <td>
                                     <a href="/admin/account/edit/@item.UserName" class="btn btn-sm btn-primary">Sửa</a>
                                     <a href="#" data-user="@item.UserName" class="btn btn-sm btn-danger btnDelete">Xóa</a>

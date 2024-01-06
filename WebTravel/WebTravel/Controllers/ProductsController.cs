@@ -14,7 +14,7 @@ namespace WebTravel.Controllers
         public ActionResult Index()
         {
             var items = db.Products.ToList();
-            
+            //var maxPrice = db.Products.Where(x => x.Price).Max();
             return View(items);
         }
 
